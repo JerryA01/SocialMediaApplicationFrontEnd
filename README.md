@@ -17,7 +17,7 @@ I programmed a Full Stack Application which is a social media application named 
 
 I did this in Javascript with the help of using the NodeJs framework and libraries from the NodeJS framework like express, Joi for validation and SQLite for database management. 
 
-I also used the VUE framework for my front end and used the bootstrap style framework for the UX - User Experience.
+I used the VUE framework for my front end and used the bootstrap style framework for the UX - User Experience.
 
 This was programmed to a predefined specification which is here https://app.swaggerhub.com/apis/MMU-SE/Chirrup/1.0.0/#/
 
