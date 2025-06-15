@@ -49,8 +49,8 @@ However once you're in the dashboard you will not see any feed/posts from follow
 This is because i have coded it in a way where once you're logged in you only see the feed/posts from yourself or your followers. As you're creating a new account you will have no followers so no feed.
 So, I have already made an account for you which has some followers so you'll be able to interact with their posts.
 
-Username: Slogan2204
-Password: Popotetez&2
+Username: RomT1989
+Password: Popotetez&2!
 
 ## installation&Usage
 Instructions - Refer to the ##HowToUseVideo if you are having difficulty.
