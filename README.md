@@ -3,6 +3,8 @@
 Here i have created a Social Media Application for university students named Chirrup. It allows students to create an account and login to engage with other students via post's. 
 This consists of a frontend and a backend which run Jointly. This is only the front end. The backend repository is on my Github.
 
+#### Head straight down to ImportantInfo & Installation&Usage if you want to run this jointly with the backend. 
+
 ## Table of Contents
 - [Overview] (#Overview)
 - [Video walkthrough of the application] (#Walkthrough)
@@ -61,18 +63,21 @@ https://www.youtube.com/watch?v=e2Op1XRsc7Q&list=PL9IcuQG2EKM1SyWShtdSMBJAEPEviD
 https://www.youtube.com/watch?v=aOoWgRKTkuA&list=PL9IcuQG2EKM1SyWShtdSMBJAEPEviD7Ti&index=2&t=13s
 
 ## ImportantInfo
-So, before you install and use this on your local machine there are some thing's you need to know:
+Before installing and running this application locally, there are a few things you should know:
 
-Once the application is running on your local machine, you'll be able to create an account and login with that account. The password must be from 8 characters to 30 characters, one capital letter, one number and one special character.
+Once it's up and running, you'll be able to create an account and log in. Passwords must be 8–30 characters long and include at least one uppercase letter, one number, and one special character.
 
-However once you're in the dashboard you will not see any feed/posts from followers. 
-This is because i have coded it in a way where once you're logged in you only see the feed/posts from yourself or your followers. As you're creating a new account you will have no followers so no feed.
-So, I have already made an account for you which has some followers so you'll be able to interact with their posts.
+After logging in, the dashboard will only show posts from you and your followers. Since a newly created account has no followers, your feed will appear empty at first.
 
-Username: RomT1989
+To help you explore the app’s features, I’ve pre-created an account with existing followers — feel free to use it to view and interact with their posts.
+
+
+
+
+Username: TLee527
 Password: Popotetez&2!
 
-## installation&Usage
+## Installation&Usage
 Instructions - Refer to the ##HowToUseVideo if you are having difficulty.
 
 Ensure the backend server is currently running. The backend repository is on my Github with instructions on how to run it.
@@ -81,21 +86,19 @@ Create a folder
 
 cd into that folder in your IDE'S terminal
 
-git init - to create a new repository
-
 git clone https://github.com/JerryA01/SocialMediaApplicationFrontEnd.git
 
 cd into the SocialMediaApplicationFrontEnd folder
 
 cd into the vue-project folder in your terminal
 
-type "npm install vite --save-dev"
+type "npm install"
 
-type "npm run" to run the Vite application
+type "npm run dev" to run the Vite application
 
 Click the localhost link to view the application
 
-Make some friends!
+Login with Username: TLee527 Password: Popotetez&2! & Make some friends!
 
 
 
