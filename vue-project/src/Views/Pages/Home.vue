@@ -23,7 +23,7 @@
     
     </div>
     
-    <div class="col-lg-12 col-md-3 col-sm-1 bg-dark">
+    <div class="col-lg-12 col-md-3 col-sm-1 bg-dark border border-dark">
     
         <em v-if="loading">Loading posts... Refresh the page if noting is shown!</em>
     
@@ -77,9 +77,6 @@ export default {
             loading: true,
             submitted: false,
             post: {},
-
-
-
         }
     },
 
@@ -91,8 +88,6 @@ export default {
         }
     },
 
-   
-    
     mounted() {
         feedService.getFeed()
             .then(posts => {
