@@ -1,117 +1,116 @@
 <template>
-    <div class="container=fluid bg-dark">
-    
-        <div class="row g-3 bg-dark">
+  <div class="container=fluid bg-dark">
+    <div class="row g-3 bg-dark">
+      <div class="col-lg-6 col-md-6 col-sm-6 mt-3">
+        <router-link to="/dashboard" class="DashBoardButtonsLoggedIn fw-bold"
+          >Back to Dashboard</router-link
+        >
+      </div>
 
-            <div class="col-lg-6 col-md-6 col-sm-6 mt-3">
-    
-                <router-link to="/dashboard" class=" DashBoardButtonsLoggedIn fw-bold">Back to Dashboard</router-link>
-    
-            </div>
-    
-            <div class="col-lg-12 col-md-6 col-sm-6">
+      <div class="col-lg-12 col-md-6 col-sm-6">
+        <h1
+          v-if="multiple"
+          class="text-center display-5 banner-heading DashBoardButtons"
+        >
+          Your reuqested users!
+        </h1>
 
-                <h1 v-if="multiple" class=" text-center display-5 banner-heading DashBoardButtons">Your reuqested users!</h1>
-    
-                <h1 v-else class=" text-center display-5 banner-heading DashBoardButtons">Your reuqested user!</h1>
-    
-            </div>
-    
-            <div class="col-lg-12 col-md-6 col-sm-6 text-center DashBoardButtons ">
-    
-    
-                    <em v-if="user.loading">Loading User...</em>
-                    <em v-if="error" class="text-center  DashBoardButtons">{{error}}</em>
-    
-                    <div v-else>
-    
-                        <ul style="list-style-type: none;">
-    
-                            <li v-for="item in user" :key="item">
-    
-                         FirstName : {{item.first_name}} <br /> LastName : {{item.last_name}} <br /> UserName : {{item.username}} <br /><br />
-    
-                            </li>
-    
-                        </ul>
-    
-                        <hr />
-    
-                        <p>All post info (for debugging during development): </p>   
-    
-                        <p> {{user}} </p>
-                         <br /><br />
-    
-                    </div>
-    
-                    <div v-if="error">
-    
-                        {{ error }}
-    
-                    </div>
-    
-            </div>
+        <h1
+          v-else
+          class="text-center display-5 banner-heading DashBoardButtons"
+        >
+          Your reuqested user!
+        </h1>
+      </div>
 
+      <div class="col-lg-12 col-md-6 col-sm-6 text-center DashBoardButtons">
+        <em v-if="user.loading">Loading User...</em>
+        <em v-if="error" class="text-center DashBoardButtons">{{ error }}</em>
 
-                
-            <div class="col-lg-6 col-md-6 col-sm-6 text-center DashBoardButtons ">
-                 <div class="text-center">
-                  <ul style="list-style-type: none;">
-                     <li v-for="item in user" :key="item">
-                      <router-link :to="'/follow/' + item.user_id">
-                        <button class="btn btn-outline-info">Follow user!</button>
-                      </router-link>
-                     </li>
-                  </ul>
-                </div>
-            </div>
-             <div class="col-lg-6 col-md-6 col-sm-6 text-center DashBoardButtons ">
-    
-                 <div class="text-center">
-    
-                <ul style="list-style-type: none;">
-                    <li v-for="item in user" :key="item">
-                      <router-link :to="'/unfollow/' + item.user_id">
-                        <button class="btn btn-outline-info">Unfollow user!</button>
-                      </router-link>
-                    </li>
-                  </ul>
-    
-                 </div>
-            </div>
-    
+        <div v-else>
+          <ul style="list-style-type: none">
+            <li v-for="item in user" :key="item">
+              FirstName : {{ item.first_name }} <br />
+              LastName : {{ item.last_name }} <br />
+              UserName : {{ item.username }} <br /><br />
+            </li>
+          </ul>
+
+          <hr />
+
+          <p>All post info (for debugging during development):</p>
+
+          <p>{{ user }}</p>
+          <br /><br />
         </div>
-    
+
+        <div v-if="error">
+          {{ error }}
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-6 col-sm-6 text-center DashBoardButtons">
+        <div class="text-center">
+          <ul style="list-style-type: none">
+            <li v-for="item in user" :key="item">
+              <router-link :to="'/follow/' + item.user_id">
+                <button class="btn btn-outline-info">Follow user!</button>
+              </router-link>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6 text-center DashBoardButtons">
+        <div class="text-center">
+          <ul style="list-style-type: none">
+            <li v-for="item in user" :key="item">
+              <router-link :to="'/unfollow/' + item.user_id">
+                <button class="btn btn-outline-info">Unfollow user!</button>
+              </router-link>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
+  </div>
 </template>
 
 <script>
-import { postService } from "../../Services/posts.service"
-import { userService } from "../../Services/users.service"
-import { socialService } from "../../Services/social.service"
+import { postService } from "../../Services/posts.service";
+import { userService } from "../../Services/users.service";
+import { socialService } from "../../Services/social.service";
 
 export default {
-    data() {
-        return {
-            user: [],
-            error: "",
-            multiple: false,
-        }
-    },
-    methods: {
+  data() {
+    return {
+      user: [],
+      error: "",
+      multiple: false,
+    };
+  },
+  methods: {
+    fetchUser(query) {
+      this.user = [];
+      this.error = "";
+      this.multiple = false;
 
-    },
-    created() {
-        this.user.loading = true;
-        console.log("do we get the route query param?" + this.$route.params.id)
-        socialService.search(this.$route.params.id)
-            .then((user) => {
-                this.user = user;
-                if (Object.keys(this.user).length > 1) {
-                this.multiple = true;
-            }
-            })
-            .catch(error => this.error = error);
+      socialService.search(query)
+        .then((user) => {
+          this.user = user;
+          this.multiple = Object.keys(user).length > 1;
+        })
+        .catch((error) => {
+          this.error = error;
+        });
     }
-}
+  },
+  mounted() {
+    this.fetchUser(this.$route.params.id);
+  },
+  watch: {
+    '$route.params.id'(newId) {
+        this.fetchUser(newId);
+    }
+  }
+};
 </script>
