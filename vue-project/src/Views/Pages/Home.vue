@@ -5,15 +5,23 @@
     
             <div class="row">
     
-                <div class="col-lg-12 col-md-12 col-sm-1">
+                <div class="col-lg-12 col-md-12 col-sm-12">
     
-                    <h1 class="text-light text-center  display-5 banner-heading mt-0 d-none d-sm-block ">Hi and welcome to Chirrup!</h1>
+                    <h1 class="text-light text-center  display-5 banner-heading mt-0">Hi and welcome to Chirrup!</h1>
+
+                      <p class="text-center fw-bold click text-warning d-block d-lg-none"> Click on a post to view! </p>
+
+                      <p class="text-light text-center display-1 banner-heading5 d-block d-lg-none">Chirrup is a social media application for the University. Here you can see what people are getting up to and enage with their posts! <br /> <br /> <br /> <span>Create an account to engage!</span> <br />Scroll down to view peoples posts!</p>
     
-                    <p class="text-light text-center  display-6 banner-heading2 d-none d-sm-block">Chirrup is a social media application for the University. Here you can see what people are getting up to and enage with their posts! <br /> <br /> <br /> <span>Create an account to engage!</span> <br />Scroll down to view peoples posts!
-    
+                      <p class="text-light text-center display-1 display-lg-6 banner-heading2 d-none d-lg-block">Chirrup is a social media application for the University. Here you can see what people are getting up to and enage with their posts! <br /> <br /> <br /> <span>Create an account to engage!</span> <br />Scroll down to view peoples posts!
+
+                    
+                
                         <br /> <br /></p>
+
+
     
-                    <p class=" text-center fw-bold click text-warning"> Click on a post to view!</p>
+                    <p class=" text-center fw-bold click text-warning d-none d-lg-block "> Click on a post to view!</p>
     
                 </div>
     
@@ -23,7 +31,7 @@
     
     </div>
     
-    <div class="col-lg-12 col-md-3 col-sm-1 bg-dark border border-dark">
+    <div class="col-lg-12 col-md-12 col-sm-12 bg-dark border border-dark">
     
         <em v-if="loading">Loading posts... Refresh the page if noting is shown!</em>
     
