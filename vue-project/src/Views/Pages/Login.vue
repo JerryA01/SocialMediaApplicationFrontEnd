@@ -76,28 +76,24 @@ export default {
             this.submitted = true
             this.error = ""
             this.$router.push("/create")
-
-
         },
 
         handleSubmit(e) {
-
             this.submitted = true
             this.error = ""
 
-
             const { password, username } = this
-
-
 
             if (!(username && password)) {
                 this.error = "You cannot submit without entering all details"
+                this.submitted = false;
                 return;
             }
 
             const password_pattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,30}$/
             if (!(password_pattern.test(password))) {
                 this.error = "Wrong password submitted."
+                this.submitted = false;
                 return;
             }
 
@@ -110,8 +106,6 @@ export default {
                     this.error = error;
                     this.submitted = false;
                 })
-
-
         },
     },
 }
