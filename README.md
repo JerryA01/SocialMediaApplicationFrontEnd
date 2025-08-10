@@ -1,6 +1,6 @@
 ## SocialMediaApplication
 
-Here i have created a Social Media Application for university students named Chirrup. It allows students to create an account and login to engage with other students via post's. 
+Here i have created a fully responsive Social Media Application for university students named Chirrup. It allows students to create an account and login to engage with other students via post's. 
 This consists of a frontend and a backend which run Jointly. This is only the front end. The backend repository is on my Github.
 
 #### Head straight down to ImportantInfo & Installation&Usage if you want to run this jointly with the backend. 
