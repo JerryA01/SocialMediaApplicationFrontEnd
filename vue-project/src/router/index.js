@@ -18,6 +18,7 @@ import followuser from "../Views/Pages/followuser.vue"
 import unfollowuser from "../Views/Pages/unfollowuser.vue"
 import Navigation from "../Views/Components/navigation.vue"
 import CreateAccount from "../Views/Pages/CreateAccount.vue"
+import FollowUnfollow from "../Views/Pages/FollowUnfollow.vue"
 
 
 const routes = [
@@ -30,6 +31,7 @@ const routes = [
     {path: "/userslog/:id", component: SingleUserLoggedIn},
     {path: "/like/:id", component: Like},
     {path: "/unlike/:id", component: UnLike},
+    {path: "/followunfollow/:id", component: FollowUnfollow},
     {path: "/deletePost/:id", component: deletePost},
     {path: "/editpost/:id", component: editPost},
     {path: "/follow/:id", component: followuser},

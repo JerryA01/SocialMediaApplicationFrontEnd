@@ -2,7 +2,7 @@
 <div class="page-wrapper">
   <div class="banner">
     <div class="container-fluid">
-      <div class="row border">
+      <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12">
           <h1
             class="text-light text-center display-5 banner-heading mt-0 d-none d-sm-block"

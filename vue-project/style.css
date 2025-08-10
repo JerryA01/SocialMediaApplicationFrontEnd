@@ -6,6 +6,12 @@
     font-size: 40px;
 }
 
+@media (max-width: 575.98px) {
+  * {
+    font-size: 20px !important;
+  }
+}
+
 .navvy{
 background-image: linear-gradient(rgba(61, 28, 28, 0.815),rgba(243, 235, 235, 0.158)),url(images/picture2.jpg); 
 background-position: top;
@@ -16,8 +22,13 @@ height: 20vh;
 .navvy img{
 width: 100px;
 height: 60px;
-    
 }
+
+.full-height-dark {
+  background-color: #212529; /* Bootstrap's bg-dark */
+  min-height: 100dvh;
+}
+
 
 .navtxt{
     color: aquamarine;
@@ -71,7 +82,7 @@ background-position: center center;
 }
 
 .banner-heading5-mobile {
-    font-size: 0.5rem !important;
+    font-size: 1rem !important;
 }
 
 .click-mobile {
@@ -81,7 +92,6 @@ background-position: center center;
 
 
 .banner-heading{
-
 font-size: 70px !important; 
 }
 
@@ -129,6 +139,10 @@ font-size: 45px;
 color: black;
 }
 
+.follow-text{
+color: rgb(194, 194, 188);
+}
+
 .FormText{
 color: white;
 }
@@ -139,15 +153,21 @@ color: white;
 
 .DashBoardButtons{
 color: rgb(202, 202, 116);
-font-size: 60px;
+font-size: 60px !important;
 text-decoration: none;
+}
+
+@media (max-width: 575.98px) {
+.DashBoardButtons {
+    font-size: 30px !important;
+}
 }
 
 .DashBoardButtonsLoggedIn{
 color: rgb(202, 202, 116);
 font-size: 37px;
 text-decoration: none;
-    }
+}
     
 .alertcolumn{
 width: 1000px;
@@ -156,6 +176,7 @@ height: 10px;
 
 body, html {
   overflow-x: hidden;
+
 }
 
 
