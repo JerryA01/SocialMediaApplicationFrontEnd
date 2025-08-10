@@ -13,32 +13,27 @@
     
         </button>
     
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    
+            <div class="collapse navbar-collapse nav-collapse-bg" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-    
                     <li class="nav-item">
     
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        <a class="nav-link fw-bold active" aria-current="page" href="/">Home</a>
     
                     </li>
     
                     <li class="nav-item">
     
-                        <a class="nav-link" href="/login">Login/Register</a>
+                        <a class="nav-link fw-bold" href="/login">Login/Register</a>
     
                     </li>
-    
+
                 </ul>
     
-                <form @submit.prevent="SearchUser" class="d-flex" role="search">
-    
+                <form @submit.prevent="SearchUser" class="search-form" role="search">
                     <input class="form-control me-2" type="Search" placeholder="Search users" aria-label="Search" name="Search" v-model="Search">
     
-                    <button class="btn btn-outline-light" type="submit">Search</button>
-    
+                    <button class="btn btn-outline-light fw-bold" type="submit">Search</button>
                 </form>
-    
             </div>
     
         </div>

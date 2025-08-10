@@ -19,12 +19,43 @@ height: 60px;
     
 }
 
+.navtxt{
+    color: aquamarine;
+}
+
 .banner{
 background-image: linear-gradient(rgba(61, 28, 28, 0.815),rgba(243, 235, 235, 0.158)),url(images/picture2.jpg); 
 background-position: center;
 width: 100%;
 min-height: 100dvh;
 background-position: center center;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@media (max-width: 991.98px) {
+  .search-form {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-form .form-control {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+.nav-collapse-bg  {
+  background-color: rgba(207, 211, 223, 0.658); /* dark semi-transparent */
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(255, 2, 158, 0.3);
+  width: 100%;
+ }
 }
 
 .banner-heading-mobile {
