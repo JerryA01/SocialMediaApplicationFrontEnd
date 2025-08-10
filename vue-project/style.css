@@ -19,15 +19,31 @@ height: 60px;
     
 }
 
-
 .banner{
 background-image: linear-gradient(rgba(61, 28, 28, 0.815),rgba(243, 235, 235, 0.158)),url(images/picture2.jpg); 
 background-position: center;
 width: 100%;
-height: 100vh;
+min-height: 100dvh;
 background-position: center center;
-
 }
+
+.banner-heading-mobile {
+    font-size: 1rem !important;
+}
+
+.login-heading-mobile {
+    font-size: 1.5rem !important;
+}
+
+.banner-heading5-mobile {
+    font-size: 0.5rem !important;
+}
+
+.click-mobile {
+    font-size: 0.5rem !important;
+    margin-top: 1rem;
+}
+
 
 .banner-heading{
 
@@ -55,6 +71,10 @@ font-size: 35px !important;
 font-size: 30px;
 }
 
+.feedtext-mobile{
+    font-size: 25px;
+}
+
 .click{
 font-size: 25px;
 margin-top: 90px;
@@ -65,12 +85,21 @@ color: rgb(202, 202, 116);;
 font-size: 45px;
 }
 
+.homefeed-mobile{
+    color: rgb(202, 202, 116);
+    font-size: 37px;
+}
+
 .Register{
 color: black;
 }
 
 .FormText{
 color: white;
+}
+
+.label-mobile{
+    font-size: 0.7rem;
 }
 
 .DashBoardButtons{
@@ -89,5 +118,12 @@ text-decoration: none;
 width: 1000px;
 height: 10px;
 }
+
+body, html {
+  overflow-x: hidden;
+}
+
+
+
 
 

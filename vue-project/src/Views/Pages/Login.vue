@@ -1,7 +1,9 @@
 <template>
     <div class="banner">
     
-        <h1 class="text-light text-center  display-5 banner-heading mt-0 ">Login!</h1>
+        <h1 class="text-light text-center banner-heading mt-0 d-none d-sm-block">Login!</h1>
+
+        <h1 class="text-light text-center login-heading-mobile mt-0 d-block d-sm-none">Login!</h1>
     
         <h1 class="text-warning text-center  display-5 banner-heading mt-0 ">{{error}}</h1>
     
