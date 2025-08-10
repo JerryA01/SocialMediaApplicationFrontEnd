@@ -12,7 +12,7 @@
               <label for="first_name" class="form-label fw-bold FormText"
                 >Firstname</label
               >
-              
+
               <input
                 type="name"
                 class="form-control"

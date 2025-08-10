@@ -72,7 +72,7 @@
     
                         </router-link>
     
-                        <div v-for="likes in post.likes">
+                        <div v-for="likes in post.likes" :key="likes.like_id">
     
                             <p class="feedtext text-center d-none d-sm-block" style="color: rgb(202, 202, 116);">Liked by: {{likes.username}} </p>
                             <p class="feedtext-mobile text-center d-block d-sm-none" style="color: rgb(202, 202, 116);">Liked by: {{likes.username}} </p>

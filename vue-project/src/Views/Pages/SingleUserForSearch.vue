@@ -79,8 +79,7 @@
 </template>
 
 <script>
-import { postService } from "../../Services/posts.service";
-import { userService } from "../../Services/users.service";
+
 import { socialService } from "../../Services/social.service";
 
 export default {
