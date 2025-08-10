@@ -67,14 +67,15 @@
     
                         <router-link :to="'/postslog/' + post.post_id" style="text-decoration: none">
     
-                            <p class=" feedtext mt-2 text-center" style="color: rgb(202, 202, 116);">{{post.author.username}} <br> POST: {{post.text}} <br /> TimeStamp: {{ formattedDate(post.timestamp) }}</p>
+                            <p class=" feedtext mt-2 text-center d-none d-sm-block" style="color: rgb(202, 202, 116);">{{post.author.username}} <br> POST: {{post.text}} <br /> TimeStamp: {{ formattedDate(post.timestamp) }}</p>
+                            <p class=" feedtext-mobile mt-2 text-center d-block d-sm-none" style="color: rgb(202, 202, 116);">{{post.author.username}} <br> POST: {{post.text}} <br /> TimeStamp: {{ formattedDate(post.timestamp) }}</p>
     
                         </router-link>
     
                         <div v-for="likes in post.likes">
     
-                            <p class="feedtext text-center" style="color: rgb(202, 202, 116);">Liked by: {{likes.username}} </p>
-    
+                            <p class="feedtext text-center d-none d-sm-block" style="color: rgb(202, 202, 116);">Liked by: {{likes.username}} </p>
+                            <p class="feedtext-mobile text-center d-block d-sm-none" style="color: rgb(202, 202, 116);">Liked by: {{likes.username}} </p>
                         </div>
     
                     </li>

@@ -52,10 +52,14 @@ background-position: center center;
 .nav-collapse-bg  {
   background-color: rgba(207, 211, 223, 0.658); /* dark semi-transparent */
   padding: 0.7rem;
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
   box-shadow: 0 0 10px rgba(255, 2, 158, 0.3);
   width: 100%;
  }
+}
+
+.nav-collapse form{
+    margin-top: 0.3rem;
 }
 
 .banner-heading-mobile {
